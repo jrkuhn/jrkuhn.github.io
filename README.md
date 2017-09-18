@@ -1,2 +1,2 @@
 # jrkuhn.github.io
-View at <justinrkuhn.me>
+View at<a href="http://justinrkuhn.me">justinrkuhn.me</a>
