@@ -1,261 +1,673 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <!-- Include meta tag to ensure proper rendering and touch zooming -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Portfolio</title>
 
-    <!-- include relative stylesheet for Jquery Mobile-->
-
-    <!-- Include the jQuery library -->
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <!-- Include the jQuery Mobile library -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
 
-    <link href='//fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <script src="LowQiCalc.js"></script>
-    <title>Team Low-Qi</title>
+<link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
+
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+
+
+<!-- <h1><br />Hello, I'm Justin Kuhn. <br />I'm a developer attending Iowa State University.</h1> -->
+
 </head>
 
-<style>
+<body data-spy="scroll" data-target="#topnavbar">
 
-    body{
-        background-image: url("MilleniumKey.jpg");
-        background-repeat: repeat;
-        background-size: 30px 50px;
+<div>
+    <nav class="navbar transparent navbar-inverse navbar-fixed-top opaque-navbar" id="topnavbar">
+        <div class = "container">
+            <div class="navbar-header">
 
-        top: 50%;
-        left: 50%;
+                <!-- button for collapsing navbar-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#hideNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>    
+                    <span class="icon-bar"></span>  
+                </button>
 
-    }
+                <!-- Title -->
+                <a href="#home" class="navbar-brand">Justin R Kuhn</a>
+            </div><!--navbar header-->
 
-    @font-face{
-        font-family:'lifepoints';
-        src: url('fonts/Nationalyze-ALP.ttf');
-    }
+            <!--navbar collapse list-->
+            <div class="collapse navbar-collapse" id="hideNavbar">
 
-    div#player1 {
-        position: relative;
-        margin-top: 60px;
-        width: 190px;
-        height: 73px;
-        background-color: white;
-        border: 1px solid black;
-        transform: rotate(90deg);
-        text-align: center;
-    }
-    div#player2 {
-        position: relative;
-        width: 175px;
-        height: 120px;
-        background-color: white;
-        border: 1px solid black;
-        transform: rotate(270deg);
-        text-align: center;
-    }
-    div#middle {
-        margin-top: 15px;
-        text-align: center;
-        position: relative;
-        left: 70px;
-        width: 50px;
-        height: 125px;
-        background-color: white;
-        border: 1px solid black;
-        transform: rotate(90deg);
-    }
+                <!--github button-->
+                <a href="https://github.com/jrkuhn" class="fa fa-github fa-2x navbar-btn navbar-right"></a>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="#about" class="">About Me</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>        
+            </div>
+        </div><!--end container-->  
+    </nav><!--end navbar-->
+</div>    
 
 
-    .LP{
+    <!--jumbotron-->
+    <div class="jumbotron jumbotron-header" id="home">
+        <div class="container ">
+            <h1 class="pink">Hello</h1>
+            <h1 class="pink">I'm Justin R. Kuhn</h1>
+            <h2 class="pink">Software Engineer</h2>
 
-        padding: 6% 0% 8%;
-        font-size: 40px;
-        color: gold;
-        background-color: #1b74a6;
-        font-family: 'lifepoints', sans-serif;
-        text-align: center;
-    }
+            <!-- buttons
+            <div class="btn-group top-buffer">
+                <a href="" class="btn btn-log btn-default">Github</a>
+                <a href="" class="btn btn-log btn-default">LinkedIn</a>
+                <a href="" class="btn btn-log btn-default">Github</a>
+            </div> -->
 
-    .plus{
-        margin-top: 10px;
-        position: relative;
-        border: none;
-        outline: none;
-        text-decoration: none;
-        border-radius: 5px;
-        padding: 15px 25px;
-        background-color: #00ff00;
-        box-shadow: 0px 5px 0px 0px #19ce5a;
-        font-size: 22px;
-    }
-    .plus:active{
-        -webkit-transform: translate(0px, 3px);
-        transform: translate(0px, 3px);
-        box-shadow: 0px 1px 0px 0px;
-    }
+        </div><!--end container-->
+    </div><!--end jumbotron-->
 
-    .minus{
-        margin-top: 10px;
-        position: relative;
-        border: none;
-        outline: none;
-        text-decoration: none;
-        border-radius: 5px;
-        padding: 15px 27px;
-        background-color: #ff0000;
-        box-shadow: 0px 5px 0px 0px #ce0320;
-        font-size: 22px;
-    }
-    .minus:active{
-        -webkit-transform: translate(0px, 3px);
-        transform: translate(0px, 3px);
-        box-shadow: 0px 1px 0px 0px;
-    }
+    <!--About-->
+    <div class="container well-sky" id="about">
+        <div class="col-sm-8 col-sm-offset-2" > <!--col-sm-offset-1-->
+            <div class="panel panel-default about-textspace top-buffer">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="imgs/JustinSrPic3.jpg" class="img-responsive" alt="Me">
+                        
+                    </div>
 
-    .middle{
-        margin-top: 12px;
-        border: none;
-        outline: none;
-        text-decoration: none;
-        border-radius: 5px;
-        padding: 2px 5px;
-        background-color: #6c92be;
-        box-shadow: 0px 2px 0px 0px #3d63a6;
-        color: #150E2D;
-        font-size: 18px;
-    }
-    .middle:active{
-        -webkit-transform: translate(0px, 3px);
-        transform: translate(0px, 1px);
-        box-shadow: 0px 2px 0px 0px;
-    }
+                    <div class="col-sm-8">
+                        <h1 class="pink text-center">About Me</h1>  
 
-    .popup{
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 330px;
-        height: 250px;
-        margin-top: -115px;
-        margin-left: -125px;
-        background: #fff;
-        color: #333;
-        font-size: 19px;
-        line-height: 30px;
-        border: 10px solid #150E2D;
-        text-align: center;
-    }
-    .rotatep1{
-        transform: rotate(90deg);
-    }
-    .rotatep2{
+                        <h3 class="pink">
+                            I'm a third year student at Iowa State University majoring in Software Engineering.
+                            I have experience with a wide spectrum of software development techologies, and I'm always 
+                            striving to learn new skills and gain new experiences as often as I can. When I work, I code
+                            with efficiency and scalability in mind. I'm always interested in new opportunities to work and gain more knowledge.
+                            When I'm not working, I'm probably playing video games or tinkering with computers.
+                        </h3>
 
-        transform: rotate(270deg);
-    }
-    .popup-close{
-        position: absolute;
-        top: 0px;
-        right: 10px;
-        border: none;
-        outline: none;
-        text-decoration: none;
-        padding: 0px 5px;
-        border-radius: 5px;
-        color: #ce0320;
-        background-color: #ff434b;
-        box-shadow: 0px 2px 0px 0px #ce0320;
-        font-family: Comic Sans,sans-serif;
-        font-size: 24px;
-        font-weight: bold;
-        text-transform: uppercase;
-        cursor: pointer;
-    }
-    .popup-close:active{
-        -webkit-transform: translate(0px, 3px);
-        transform: translate(0px, 2px);
-        box-shadow: 0px 2px 0px 0px;
-    }
+                        <button class="btn btn-primary btn-lg center-block" 
+                        onClick="location.href='https://drive.google.com/open?id=0B57Pjqtph0igMWZ4OVVKVUwtUGc'">
+                            View My Resume
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </button>
 
-    .num{
-        margin-top: 10px;
-        border: none;
-        outline: none;
-        text-decoration: none;
-        border-radius: 5px;
-        padding: 15px 25px;
-        background-color: #6c92be;
-        box-shadow: 0px 2px 0px 0px #3d63a6;
-        font-size: 18px;
-        color: gold;
-        font-family: 'lifepoints', sans-serif;
-    }
-    .num:active{
-        -webkit-transform: translate(0px, 3px);
-        transform: translate(0px, 2px);
-        box-shadow: 0px 2px 0px 0px;
-    }
+                        <!-- Direct Download
+                        onClick="location.href='https://docs.google.com/document/d/1BqMS_7p1GA1_DYwSdOhvgX2R0ok6CJAUDC51pKQygzA/export?format=pdf'">
+                        -->
 
-</style>
+                    </div>    
+                </div>
+            </div>
+                <!-- contact bar-->
+                <div class="panel panel-default panel-iconspace text-center">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="https://www.facebook.com/justin.kuhn.100" class="fa fa-facebook fa-big fa-2x" aria-hidden="true"></a>
+                            <a href="https://twitter.com/?lang=en" class="fa fa-twitter fa-big fa-2x" aria-hidden="true"></a>
+                            <a href="https://www.linkedin.com/in/jrkuhn/" class="fa fa-linkedin fa-big fa-2x" aria-hidden="true"></a>
+                            <a href="https://github.com/jrkuhn" class="fa fa-github fa-github-solid fa-big fa-2x" aria-hidden="true"></a>
+                        </div>
+                            
+                        <div class="col-sm-4">
+                            <h4 class="pink"style="font-size:20px;">Email: jrkuhn@iastate.edu</h4>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <h4 class="pink"style="font-size:20px;">Phone: (641)-251-4621</h4>
+                        </div>
+                            
+                           
+                    </div>
+                </div>   
+                
+        </div>
+    </div>
 
+    <!--Experience-->
+    <div class="well well-pink" id="experience"> 
+        <h1 class="pink text-center">Experience</h1>
+        <br>
+        <div class="row top-buffer"> 
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="row">
+                
+                    <div class="panel panel-default panel-exp">
+                        
+                        <div class="text-center">
+                            <span class="glyphicon glyphicon-education"></span>
+                            <h2 class="pink text-center">Iowa State University</h2>
+                            <i><h3 class="pink text-center">2015 - Present</h3></i>
+                        </div>
+                       
+                        <h3 class="pink text-center">Working towards my Bachelor of Science in Software Engineering. My estimated graduation date is May 2019</h3>
+                        
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="row top-buffer"> 
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="row">
+                        <div class="panel panel-default panel-exp">
+                                
+                                <div class="text-center">
+                                    <span class="glyphicon glyphicon-header"></span>
+                                    <h2 class="pink text-center">Emergent Health Care Solutions</h2>
+                                    <i><h3 class="pink text-center"> May 2017 - August 2017</h3></i>
+                                </div>
+                               
+                                <h3 class="pink text-center">
+                                    Worked as an intern creating a smarter solution for athlete adduction testing. 
+                                    Developed an Ipad application for use with an Arduino bluetooth device. Working in Agile, 
+                                    I built the app in Swift 3 and programmed the Arduino in C++</h3>
+                                
+                            </div>
+                </div>  
+            </div>
+        </div>
+    </div> <!--end well-->
+    
+    
+    <!--Projects-->
+    <div class="well well-sky" id="projects">
+        <div class="text-center">
+            <h1 class="pink">Projects</h1>
+        </div>
 
-<body>
+        <br>
 
-<div id="calc">
+        <!--Bubble Bunker-->
+        <div class="row top-buffer"> 
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="panel panel-default panel-textspace">
+                    <div class="row"> 
+                        <div class="col-sm-8">
+                            <h2 class="pink text-center">Bubble Bunker</h2>
+                            <h3 class="pink">
+                                A dual-stick shooter created using Unity3D and C# in under 72 hours during Iowa State University's HackISU.
+                                The premise of the game is to shoot bubblegum at the attacking monsters and survive for as long as you can. 
+                                I helped create the project in a team with two of my peers. I was responsible for much of the code as well 
+                                as some of the 3D modeling and the Unity3D project layout.
+                            </h3>
 
-    <div id="player1">
-        <div class="LP" id="LP1" >8000</div>
+                            <button class="btn btn-primary btn-lg center-block" 
+                                onClick="location.href='https://github.com/jrkuhn/Bunker_Warfare'">
+                                    More
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </button>
+
+                        </div>
+
+                        <div class="col-sm-4">
+                            <img src="imgs/bubblebunker.png" class="img-responsive" alt="image">
+                        </div>
+
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <!--Tabletop Calculator-->
+        <div class="row top-buffer"> 
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="panel panel-default panel-textspace">
+                    <div class="row"> 
+                        <div class="col-sm-8">
+                            <h2 class="pink text-center">Tabletop Calculator</h2>
+                            <h3 class="pink">
+                                A custom calculator webapp which targets mobile users looking for a better tabletop gaming tool 
+                                than a general calculator. It contains two pop-up calculators with custom keypads, and several other 
+                                features such as simulated dice rolling and coin flipping. I created the application as a 
+                                personal project for me and my friends, and because it is a webapp, anyone with a mobile browser can quickly
+                                access it too.
+                            </h3>
+                            <button class="btn btn-primary btn-lg center-block" 
+                                onClick="location.href='https://github.com/jrkuhn/TeamLowQi/tree/gh-pages'">
+                                More
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </button>
+                        </div>
+                        
+
+                        <div class="col-sm-4">
+                            <div class="carousel slide" id="TLQCarousel" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#imageCarousel" data-slide-to="1"></li>
+                                    <li data-target="#imageCarousel" data-slide-to="2"></li>
+                                </ol>
+                
+                                <div class="carousel-inner">
+                                    <!--include images for carousel-->
+                                    <div class="item active">
+                                        <a href="https://github.com/jrkuhn/TeamLowQi/tree/gh-pages"><img src="imgs/TLQgallery/TLQBLUE.jpeg" class="img-responsive" alt="Image of Me"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://github.com/jrkuhn/TeamLowQi/tree/gh-pages"><img src="imgs/TLQgallery/TLQdemo1.png" class="img-responsive" alt="Second Image of Me"></a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="https://github.com/jrkuhn/TeamLowQi/tree/gh-pages"><img src="imgs/TLQgallery/TLQdemo2.png" class="img-responsive" alt="Second Image of Me"></a>
+                                    </div>
+                                    
+                                </div><!--end inner slide-->
+                
+                            <!--arrows-->
+                                <a href="#TLQCarousel" class="left carousel-control" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a href="#TLQCarousel" class="right carousel-control" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            
+                
+                            </div> <!--end carousel-->
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <!--third proj
+        <div class="row top-buffer"> 
+            <div class="col-sm-10 col-sm-offset-1">
+                <div class="panel panel-default text-center">
+                    <div class="row text-center">
+                        <div class="col-sm-8">
+                            <h2 class="pink">Some of the work I've accomplished</h2>
+                        </div>
+                        
+                        <div class="col-sm-4">
+                            <img src="imgs/bubblebunker.png" class="img-responsive" alt="image3">
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        -->
 
     </div>
 
-    <div id="middle">
-        <button class="middle" id="reset">reset</button>
-        <button class="middle" id="coin">coin</button>
-        <button class="middle" id="dice">dice</button>
+    <!--Skills-->
+    <div class="well well-pink" id="skills">
+        <h1 class="pink text-center">Skills</h1>
+
+        <div class="row top-buffer">
+            <div class="col-sm-6">
+                <!--Languages 1-->
+                <div class="panel panel-default">
+                    <div class="panel-body panel-sky">
+                        
+                        <h3 class="pink">Languages</h3>
+
+                        <div class="progress top-buffer">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                <span class="progress-span">Java</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                <span class="progress-span">C/C++</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                <span class="progress-span">JavaScript</span>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                <span class="progress-span">HTML/CSS</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                                <span class="progress-span">Swift</span>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                                <span class="progress-span">SQL</span>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                <span class="progress-span">PHP</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm-6">
+                <!--Tools-->
+                <div class="panel panel-default">
+                    <div class="panel-body panel-sky">
+                        
+                        <h3 class="pink">Tools</h3>
+
+                        <div class="progress top-buffer">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                <span class="progress-span">Eclipse</span>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                <span class="progress-span">Xcode</span>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                <span class="progress-span">Git</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                                <span class="progress-span">MySQL</span>
+                            </div>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                <span class="progress-span">Unity3D</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                <span class="progress-span">Blender</span>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width:55%">
+                                <span class="progress-span">Arduino</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Languages
+            <div class="col-sm-4">
+                
+                <div class="panel panel-default">
+                    <div class="panel-body panel-sky">
+                        
+                        <h3 class="pink">Languages</h3>
+
+                        <div class="progress top-buffer">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                                <span class="progress-span">Java</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                                <span class="progress-span">C/C++</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                <span class="progress-span">JavaScript</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                                <span class="progress-span">SQL</span>
+                            </div>
+                        </div>
+        
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                                <span class="progress-span">PHP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+
+        </div> 
     </div>
 
-    <div id="player2">
-        <div class="LP" id="LP2" >8000</div>
-        <button class="plus" id="plus2" value="+">+</button>
-        <button class="minus" id="minus2" value="-">-</button>
+    <!--Skills Well
+    <section>
+        <div class="well well-pink">
+            <div class="container text-center">
+                <h3 class="sky">Skills</h3>
+                <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                        aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                          Java
+                        </div>
+                    </div>
+    
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+                          C/C++
+                        </div>
+                    </div>
+    
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                        aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                          JavaScript
+                        </div>
+                    </div>
+    
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                        aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                          SQL
+                        </div>
+                    </div>
+    
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                          PHP
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+-->
+
+
+    <!--Gallery-->
+    <div class="well well-sky" id="gallery">
+        
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                
+            
+         
+                <h1 class="pink text-center">Gallery</h1>
+                
+                <div class="carousel slide" id="galleryCarousel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#imageCarousel" data-slide-to="1"></li>
+                        <li data-target="#imageCarousel" data-slide-to="2"></li>
+                        <li data-target="#imageCarousel" data-slide-to="3"></li>
+                        <li data-target="#imageCarousel" data-slide-to="4"></li>
+                        <li data-target="#imageCarousel" data-slide-to="5"></li>
+                        <li data-target="#imageCarousel" data-slide-to="6"></li>
+                        <li data-target="#imageCarousel" data-slide-to="7"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <!--1-->
+                        <div class="item active">
+                            <img src="imgs/gallery/hackisu.jpg" alt="HackISU">
+                            <div class="container">
+                                <div class= "carousel-caption">
+                                    <h3 class="pink">HackISU</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--2-->
+                        <div class="item">
+                            <img src="imgs/gallery/hackisu2.jpg" alt="HackISU2">
+                            <div class="container">
+                                <div class= "carousel-caption">
+                                    <h3 class="pink">HackISU</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                        <!--3-->
+                        <div class="item">
+                            <img src="imgs/gallery/setup0.jpg" alt="MySetup">
+                            <div class="container">
+                                <div class= "carousel-caption">
+                                    <h3 class="pink">My Humble Abode</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--4-->
+                        <div class="item">
+                            <img src="imgs/gallery/setup01.jpg" alt="MyPC">
+                            <div class="container">
+                                <div class= "carousel-caption">
+                                    <h3 class="pink">My Most Recent Handiwork</h3>
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                        <!--5-->
+                        <div class="item">
+                            <img src="imgs/gallery/setup1.jpg" alt="pastsetup">
+                            <div class="container">
+                                <div class= "carousel-caption">
+                                    <h3 class="pink">Once Had 3 Screens</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--6-->
+                        <div class="item">
+                            <img src="imgs/gallery/setup2.jpg" alt="oldPC">
+                            <div class="container">
+                                <div class= "carousel-caption">
+                                    <h3 class="pink">My Previous PC</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--7-->
+                        <div class="item">
+                            <img src="imgs/gallery/setup3.jpg" alt="prevdesk">
+                            <div class="container">
+                                <div class= "carousel-caption">
+                                    <h3 class="pink">Too Many Screens</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--8-->
+                        <div class="item">
+                            <img src="imgs/gallery/teachingGrandma.jpg" alt="My Setup">
+                            <div class= "carousel-caption">
+                                <h3 class="pink">Teaching Grandma</h3>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </div><!--end inner slide-->
+
+                    <!--arrows-->
+                    <a href="#galleryCarousel" class="left carousel-control" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a href="#galleryCarousel" class="right carousel-control" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                
+                </div> <!--end carousel-->
+            </div>
+        </div>   
     </div>
 
-    <div class="popup rotatep1" id="pop1">
-        <div class="LP" id="temp1">0</div>
-        <span class="popup-close" id="close1">X</span>
-        <button class="num" id="pop1num1" value='1'>1</button>
-        <button class="num" id="pop1num2" value='2'>2</button>
-        <button class="num" id="pop1num3" value='3'>3</button>
-        <button class="num" id="pop1num4" value='4'>4</button>
-        <button class="num" id="pop1num5" value='5'>5</button>
-        <button class="num" id="pop1num6" value='6'>6</button>
-        <button class="num" id="pop1num7" value='7'>7</button>
-        <button class="num" id="pop1num8" value='8'>8</button>
-        <button class="num" id="pop1num9" value='9'>9</button>
-        <button class="num" id="pop1num0" value='0'>0</button>
-        <button class="plus" id="enter1">calculate</button>
-        <button class="plus" id="plus1" value="+">+</button>
-        <button class="minus" id="minus1" value="-">-</button>
+    <!--Contact-->
+    <section>
+        <div class="well well-pink" id="contact">
+            <div class="container text-center">
+                <h2 class="pink">Get In Contact with Me</h2>
+                <br>
+                <a href="#" class="fa fa-facebook fa-2x"aria-hidden="true"></a>
+                <a href="#" class="fa fa-twitter fa-2x" aria-hidden="true"></a>
+                <a href="https://www.linkedin.com/in/jrkuhn/" class="fa fa-linkedin fa-2x" aria-hidden="true"></a>
+                <a href="https://github.com/jrkuhn" class="fa fa-github fa-github-solid fa-2x" aria-hidden="true"></a>
+                <br>
+            </div>
+        </div><!--end well-->
+    </section>
 
-    </div>
-    <div class="popup rotatep2" id="pop2">
-        <div class="LP" id="temp2">0</div>
-        <span class="popup-close" id="close2">X</span>
-        <button class="num" id="pop2num1" value='1'>1</button>
-        <button class="num" id="pop2num2" value='2'>2</button>
-        <button class="num" id="pop2num3" value='3'>3</button>
-        <button class="num" id="pop2num4" value='4'>4</button>
-        <button class="num" id="pop2num5" value='5'>5</button>
-        <button class="num" id="pop2num6" value='6'>6</button>
-        <button class="num" id="pop2num7" value='7'>7</button>
-        <button class="num" id="pop2num8" value='8'>8</button>
-        <button class="num" id="pop2num9" value='9'>9</button>
-        <button class="num" id="pop2num0" value='0'>0</button>
-        <button class="plus" id="enter2">calculate</button>
-    </div>
-</div>
+
+    
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </body>
-
 </html>
