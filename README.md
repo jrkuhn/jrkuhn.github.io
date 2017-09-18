@@ -1,2 +1,2 @@
 # jrkuhn.github.io
-View at justinrkuhn.me
+View at [justinrkuhn.me](justinrkuhhn.me)
