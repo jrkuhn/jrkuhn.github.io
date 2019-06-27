@@ -239,6 +239,11 @@ button.btn-primary {
   color: #FFC8E1;
 }
 
+.glyphicon.glyphicon-plane {
+  font-size: 50px;
+  color: #FFC8E1;
+}
+
 .glyphicon.glyphicon-stats {
   font-size: 50px;
   color: #FFC8E1;
