@@ -71,10 +71,9 @@ button.btn-primary {
   background-color: #D7FFFF;
   min-width: 100%;
   height: auto;
-  align-self: auto;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
   background-size: cover;
   -webkit-background-position: center;
   -moz-background-position: center;
@@ -95,7 +94,7 @@ button.btn-primary {
 }
 
 .well-clear {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
   min-width: 100%;
   margin-bottom: -1px;
 }
@@ -109,7 +108,7 @@ button.btn-primary {
 }
 
 .panel-clear {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .transparent {
@@ -189,7 +188,6 @@ button.btn-primary {
   min-height: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  -webkit-background-size: cover;
   background-size: cover;
 }
 
@@ -235,6 +233,11 @@ button.btn-primary {
 }
 
 .glyphicon.glyphicon-education {
+  font-size: 50px;
+  color: #FFC8E1;
+}
+
+.glyphicon.glyphicon-plane {
   font-size: 50px;
   color: #FFC8E1;
 }
